@@ -19,20 +19,20 @@ def test_student_dict_operations():
         "李四": 92,
         "王五": 78
     }
-    
+
     # 测试添加学生
     result = student_dict_operations(initial_dict, "add", "赵六", 88)
     assert "赵六" in result
     assert result["赵六"] == 88
-    
+
     # 测试删除学生
     result = student_dict_operations(result, "remove", "李四")
     assert "李四" not in result
-    
+
     # 测试修改学生成绩
     result = student_dict_operations(result, "update", "张三", 95)
     assert result["张三"] == 95
-    
+
     # 测试获取学生成绩
     score = student_dict_operations(result, "get", "张三")
     assert score == 95

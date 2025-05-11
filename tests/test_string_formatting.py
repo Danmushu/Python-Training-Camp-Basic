@@ -20,4 +20,4 @@ def test_format_student_info():
     
     result = format_student_info("李四", 20)
     assert "姓名: 李四" in result
-    assert "年龄: 20" in result 
+    assert "年龄: 20" in result

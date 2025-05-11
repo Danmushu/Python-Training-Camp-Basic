@@ -16,7 +16,6 @@ from exercises.http_requests import get_website_content, post_data
 def test_get_website_content_live():
     """测试实际GET请求（需要网络）"""
     result = get_website_content('https://httpbin.org/get')
-    
     assert isinstance(result, dict), "返回值应该是字典"
     assert 'status_code' in result, "字典应该包含'status_code'键"
     assert 'content' in result, "字典应该包含'content'键"
@@ -40,6 +39,7 @@ def test_get_website_content_mock():
     
     # 测试函数
     result = get_website_content('https://example.com/test')
+    print(result)
     
     # 验证结果
     assert isinstance(result, dict), "返回值应该是字典"
