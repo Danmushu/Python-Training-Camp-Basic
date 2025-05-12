@@ -7,6 +7,7 @@
 请补全下面的函数，对学生成绩字典进行各种操作。
 """
 
+
 def student_dict_operations(students_dict, operation, *args):
     """
     对学生字典进行操作
@@ -20,13 +21,14 @@ def student_dict_operations(students_dict, operation, *args):
     - 根据操作返回不同结果
     """
     # 请在下方编写代码
-    match operation:
-        case "add":
-            students_dict[args[0]] = args[1]
-        case "remove":
-            del students_dict[args[0]]
-        case "update":
-            students_dict[args[0]] = args[1]
-        case "get":
-            return students_dict[args[0]]
+
+    if operation == "update":
+        students_dict[args[0]] = args[1]
+    elif operation == "get":
+        return students_dict[args[0]]
+    elif operation == "remove":
+        del students_dict[args[0]]
+    elif operation == "add":
+        students_dict[args[0]] = args[1]
+
     return students_dict
